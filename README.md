@@ -12,13 +12,13 @@ The objective of this project was to transform raw transactional sales data into
 
 The project aims to answer key business questions such as:
 
- Which products generate the most revenue?
- Which regions contribute the most to total sales?
- Who are the highest-value customers?
- How do sales change over time?
- Which categories sell the most units?
- How much does each product contribute to overall revenue?
- What are the monthly sales trends and growth patterns?
+* Which products generate the most revenue?
+* Which regions contribute the most to total sales?
+* Who are the highest-value customers?
+* How do sales change over time?
+* Which categories sell the most units?
+* How much does each product contribute to overall revenue?
+* What are the monthly sales trends and growth patterns?
 
 ---
 
@@ -26,24 +26,24 @@ The project aims to answer key business questions such as:
 
 The dataset contains retail sales transactions with the following information:
 
- Order Details
- Customer Information
- Product Information
- Regional Data
- Pricing and Discount Information
- Sales Transactions
+* Order Details
+* Customer Information
+* Product Information
+* Regional Data
+* Pricing and Discount Information
+* Sales Transactions
 
 ### Data Quality Issues Identified
 
- Duplicate records
- Missing ages
- Missing customer names
- Invalid ages
- Invalid dates
- Negative sales values
- Null discounts
- Inconsistent category names
- Inconsistent gender values
+* Duplicate records
+* Missing ages
+* Missing customer names
+* Invalid ages
+* Invalid dates
+* Negative sales values
+* Null discounts
+* Inconsistent category names
+* Inconsistent gender values
 
 ---
 
@@ -53,15 +53,15 @@ A cleaned version of the dataset was created using SQL Server.
 
 ### Cleaning Tasks Performed
 
- Converted OrderDate to DATE format using TRY_CAST()
- Standardized Customer IDs
- Trimmed unnecessary whitespace from text fields
- Standardized Gender values
- Corrected inconsistent Category names
- Replaced invalid ages with NULL
- Replaced NULL discounts with 0
- Identified and handled negative sales values
- Removed duplicate records using ROW_NUMBER()
+* Converted OrderDate to DATE format using TRY_CAST()
+* Standardized Customer IDs
+* Trimmed unnecessary whitespace from text fields
+* Standardized Gender values
+* Corrected inconsistent Category names
+* Replaced invalid ages with NULL
+* Replaced NULL discounts with 0
+* Identified and handled negative sales values
+* Removed duplicate records using ROW_NUMBER()
 
 ### Example Transformations
 
@@ -84,12 +84,12 @@ A simple star schema was implemented to support analytical reporting.
 
 Contains customer information:
 
- CustomerID
- CustomerName
- Gender
- Age
- Region
- City
+* CustomerID
+* CustomerName
+* Gender
+* Age
+* Region
+* City
 
 ### Fact Table
 
@@ -97,15 +97,15 @@ Contains customer information:
 
 Contains transactional sales information:
 
- OrderID
- OrderDate
- CustomerID
- Product
- Category
- Quantity
- UnitPrice
- Discount
- Sales
+* OrderID
+* OrderDate
+* CustomerID
+* Product
+* Category
+* Quantity
+* UnitPrice
+* Discount
+* Sales
 
 ---
 
@@ -113,49 +113,49 @@ Contains transactional sales information:
 
 ### Executive KPIs
 
- Total Revenue
- Total Orders
- Total Customers
- Total Units Sold
+* Total Revenue
+* Total Orders
+* Total Customers
+* Total Units Sold
 
 
 ### Customer Analysis
 
- Total Sales by Customer
- Top Customers by Revenue
- Revenue by Gender
+* Total Sales by Customer
+* Top Customers by Revenue
+* Revenue by Gender
 
 
 ### Product Analysis
 
- Total Sales by Product
- Best Selling Products
- Product Revenue Contribution (%)
- Product Ranking
+* Total Sales by Product
+* Best Selling Products
+* Product Revenue Contribution (%)
+* Product Ranking
 
 ### Regional Analysis
 
- Revenue by Region
- Quantity Sold by Region
- Top Performing Regions
+* Revenue by Region
+* Quantity Sold by Region
+* Top Performing Regions
 
 ### Time Series Analysis
 
- Monthly Sales Trends
- Month-over-Month Growth Analysis
- Running Revenue Totals
+* Monthly Sales Trends
+* Month-over-Month Growth Analysis
+* Running Revenue Totals
 
 ### Advanced SQL Concepts Used
 
- Common Table Expressions (CTEs)
- Window Functions
- ROW_NUMBER()
- LAG()
- RANK()
- Aggregate Functions
- CASE Statements
- Data Type Conversions
- Joins
+* Common Table Expressions (CTEs)
+* Window Functions
+* ROW_NUMBER()
+* LAG()
+* RANK()
+* Aggregate Functions
+* CASE Statements
+* Data Type Conversions
+* Joins
 
 ---
 
@@ -165,51 +165,51 @@ The Power BI dashboard consists of three pages:
 
 ### Executive Overview
 
- Total Revenue KPI
- Total Orders KPI
- Total Customers KPI
- Total Units Sold KPI
- Revenue Trend Analysis
- Revenue by Category
- Revenue by Region
+* Total Revenue KPI
+* Total Orders KPI
+* Total Customers KPI
+* Total Units Sold KPI
+* Revenue Trend Analysis
+* Revenue by Category
+* Revenue by Region
 
 ### Customer Insights
 
- Revenue by Gender
- Revenue by Age Group
- Top Customers
- Customer Distribution by Region
+* Revenue by Gender
+* Revenue by Age Group
+* Top Customers
+* Customer Distribution by Region
 
 ### Product & Regional Performance
 
- Product Revenue Ranking
- Product Revenue Contribution
- Quantity Sold by Category
- Discount vs Revenue Analysis
- Top Products by Region
+* Product Revenue Ranking
+* Product Revenue Contribution
+* Quantity Sold by Category
+* Discount vs Revenue Analysis
+* Top Products by Region
 
 ---
 
 ## Tools Used
 
- SQL Server
- SQL Server Management Studio (SSMS)
- Power BI Desktop
- GitHub
+* SQL Server
+* SQL Server Management Studio (SSMS)
+* Power BI Desktop
+* GitHub
 
 ---
 
 ## Key Skills Demonstrated
 
- Data Cleaning
- Data Validation
- Data Modeling
- SQL Querying
- Window Functions
- Business Analysis
- Data Visualization
- Dashboard Development
- Data Storytelling
+* Data Cleaning
+* Data Validation
+* Data Modeling
+* SQL Querying
+* Window Functions
+* Business Analysis
+* Data Visualization
+* Dashboard Development
+* Data Storytelling
 
 ---
 
@@ -217,8 +217,8 @@ The Power BI dashboard consists of three pages:
 
 ```text
 Retail-Sales-Analytics
-
-Data
+│
+├── Data
 │   └── RetailSales.csv
 │
 ├── SQL
@@ -232,10 +232,10 @@ Data
 │   └── 08_Time_Series_Analysis.sql
 │
 ├── PowerBI
-│   └── RetailSalesDashboard.pbix
-│
-├── ScreenShots
-│   
+│   └── RetailSales.pbix
+│   |__ Dashboard Screenshots
+├── Screenshots
+│   |__Query Screenshots
 │   
 │   
 │
